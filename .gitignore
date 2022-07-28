@@ -1,5 +1,5 @@
-/node_modules/
+*/node_modules/
 /.idea/
-package-lock.json
-/dist/
-/.parcel-cache/
+*/package-lock.json
+*/dist/
+*/.parcel-cache/
