@@ -2,29 +2,19 @@ const firstNumber = document.querySelector('input[name="first-number"]');
 const secondNumber = document.querySelector('input[name="second-number"]');
 const additionButton = document.querySelector('button[name="addition"]');
 const subtractionButton = document.querySelector('button[name="subtraction"]');
+const output = document.querySelector('output[name="result"]');
 
 const additionFunction = (event) => {
     event.preventDefault();
-    addF(firstNumber, secondNumber);
+    output.innerHTML = `${Number(firstNumber.value) + Number(secondNumber.value)}`;
 };
-
-const subtractionFunction = (event) => {
-    event.preventDefault();
-    substrF(firstNumber, secondNumber);
-};
-
-
-function addF() {
-    let addResult = Number(firstNumber.value) + Number(secondNumber.value);
-     document.querySelector('output[name="result"]').innerHTML = `${addResult}`;
-};
-
-function substrF() {
-    let SubstrResult = Number(firstNumber.value) - Number(secondNumber.value);
-    document.querySelector('output[name="result"]').innerHTML = `${SubstrResult}`;
-};
-
 additionButton.addEventListener('click', additionFunction);
+
+
+const subtractionFunction = function(event) {
+    event.preventDefault();
+    output.innerHTML = `${Number(firstNumber.value) - Number(secondNumber.value)}`;
+};
 subtractionButton.addEventListener('click', subtractionFunction);
 
 // const resultField = document.querySelector('.result');
